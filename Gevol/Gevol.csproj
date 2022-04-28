@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1C097840-4294-404B-BE75-EFC04DBC4BEB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Gevol</RootNamespace>
+    <AssemblyName>Gevol</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MathNet.Numerics, Version=3.16.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MathNet.Numerics.3.16.0\lib\net40\MathNet.Numerics.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="evolution\algorithm\Algorithm.cs" />
+    <Compile Include="evolution\algorithm\binary\SGAAlgorithm.cs" />
+    <Compile Include="evolution\algorithm\EdaAlgorithm.cs" />
+    <Compile Include="evolution\algorithm\eda\binary\CGAAlgorithm.cs" />
+    <Compile Include="evolution\algorithm\eda\binary\ECGAAlgorithm.cs" />
+    <Compile Include="evolution\algorithm\eda\binary\PBILAlgorithm.cs" />
+    <Compile Include="evolution\algorithm\eda\binary\UMDAAlgorithm.cs" />
+    <Compile Include="evolution\algorithm\real\ESMILambdaKappaRoRechenberg.cs" />
+    <Compile Include="evolution\evoperator\binary\NegationMutation.cs" />
+    <Compile Include="evolution\evoperator\binary\UniformCrossover.cs" />
+    <Compile Include="evolution\evoperator\eda\binary\CGAOperator.cs" />
+    <Compile Include="evolution\evoperator\eda\binary\ECGAOperator.cs" />
+    <Compile Include="evolution\evoperator\eda\binary\PBILOperator.cs" />
+    <Compile Include="evolution\evoperator\eda\EdaOperator.cs" />
+    <Compile Include="evolution\evoperator\eda\binary\UMDAOperator.cs" />
+    <Compile Include="evolution\evoperator\eda\model\CGAModel.cs" />
+    <Compile Include="evolution\evoperator\eda\model\ECGAModel.cs" />
+    <Compile Include="evolution\evoperator\eda\model\PBILModel.cs" />
+    <Compile Include="evolution\evoperator\eda\model\UMDAModel.cs" />
+    <Compile Include="evolution\evoperator\real\RealGlobalIntermediaryRecombination.cs" />
+    <Compile Include="evolution\evoperator\real\RealLocalIntermediaryRecombination.cs" />
+    <Compile Include="evolution\evoperator\real\RealMutation.cs" />
+    <Compile Include="evolution\evoperator\real\RealRandomSelection.cs" />
+    <Compile Include="evolution\evoperator\real\RealUniformCrossover.cs" />
+    <Compile Include="evolution\evoperator\replacement\NSGA2Replacement.cs" />
+    <Compile Include="evolution\evoperator\selection\BlockSelection.cs" />
+    <Compile Include="evolution\evoperator\ReplacementOperator.cs" />
+    <Compile Include="evolution\evoperator\replacement\BestFromUnionReplacement.cs" />
+    <Compile Include="evolution\evoperator\selection\RouletteSelection.cs" />
+    <Compile Include="evolution\evoperator\util\RechenbergSuccessRule.cs" />
+    <Compile Include="evolution\individual\real\RealIndividual.cs" />
+    <Compile Include="evolution\objective\binary\ComposedTrapOneMax.cs" />
+    <Compile Include="evolution\objective\binary\TrapOneMax.cs" />
+    <Compile Include="evolution\objective\real\AckleyFunction.cs" />
+    <Compile Include="evolution\objective\real\SchwefelFunction.cs" />
+    <Compile Include="evolution\objective\real\RastriginFunction.cs" />
+    <Compile Include="evolution\objective\real\PowellFunction.cs" />
+    <Compile Include="evolution\objective\real\GriewankFunction.cs" />
+    <Compile Include="evolution\objective\real\SphereFunction.cs" />
+    <Compile Include="evolution\termination\eda\binary\ConvergenceInProbability.cs" />
+    <Compile Include="evolution\termination\eda\binary\ECGAModelConvergence.cs" />
+    <Compile Include="evolution\termination\eda\binary\ECGAModelImprovement.cs" />
+    <Compile Include="evolution\util\PrintStatistics.cs" />
+    <Compile Include="evolution\individual\binary\BinaryIndividual.cs" />
+    <Compile Include="evolution\individual\Individual.cs" />
+    <Compile Include="evolution\individual\Population.cs" />
+    <Compile Include="evolution\evoperator\Operator.cs" />
+    <Compile Include="evolution\objective\binary\BinaryPattern.cs" />
+    <Compile Include="evolution\objective\binary\OneMax.cs" />
+    <Compile Include="evolution\objective\ObjectiveFunction.cs" />
+    <Compile Include="evolution\objective\ObjectiveFunctions.cs" />
+    <Compile Include="evolution\termination\NumberOfIterations.cs" />
+    <Compile Include="evolution\termination\TerminationCondition.cs" />
+    <Compile Include="evolution\util\Randomizer.cs" />
+    <Compile Include="evolution\util\Sort.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LICENSE.md" />
+    <None Include="packages.config" />
+    <None Include="README.md" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

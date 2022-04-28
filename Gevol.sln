@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gevol", "Gevol\Gevol.csproj", "{1C097840-4294-404B-BE75-EFC04DBC4BEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvoTest", "EvoTest\EvoTest.csproj", "{2972CAAD-9B21-4448-9930-5EEB4ED322BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvoUnitTest", "EvoUnitTest\EvoUnitTest.csproj", "{E89CBF64-BFCE-43B3-88AF-45F09BC79659}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C097840-4294-404B-BE75-EFC04DBC4BEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C097840-4294-404B-BE75-EFC04DBC4BEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C097840-4294-404B-BE75-EFC04DBC4BEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C097840-4294-404B-BE75-EFC04DBC4BEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2972CAAD-9B21-4448-9930-5EEB4ED322BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2972CAAD-9B21-4448-9930-5EEB4ED322BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2972CAAD-9B21-4448-9930-5EEB4ED322BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E89CBF64-BFCE-43B3-88AF-45F09BC79659}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E89CBF64-BFCE-43B3-88AF-45F09BC79659}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E89CBF64-BFCE-43B3-88AF-45F09BC79659}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
